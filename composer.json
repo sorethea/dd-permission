@@ -1,0 +1,21 @@
+{
+    "name": "sorethea/dd-permission",
+    "type": "module",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Sorethea\\DdPermission\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sorethea OK",
+            "email": "sorethea@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "spatie/laravel-permission": "5.*",
+        "sorethea/dd-permission": "dev-main"
+    }
+}
