@@ -4,7 +4,7 @@ namespace Sorethea\DdPermission\Filament\Resources\PermissionResource\Pages;
 
 use Filament\Pages\Actions;
 use Filament\Resources\Pages\EditRecord;
-use PermissionResource;
+use Sorethea\DdPermission\Filament\Resources\PermissionResource;
 
 class EditPermission extends EditRecord
 {
