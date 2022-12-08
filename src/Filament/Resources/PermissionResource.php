@@ -1,7 +1,5 @@
 <?php
 namespace Sorethea\DdPermission\Filament\Resources;
-use Sorethea\DdPermission\Filament\Resources\PermissionResource\Pages;
-use Sorethea\DdPermission\Filament\Resources\PermissionResource\RelationManagers;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
