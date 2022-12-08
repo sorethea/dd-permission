@@ -13,7 +13,12 @@ class PermissionResource extends Resource
 {
     protected static ?string $model = Permission::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-key';
+    protected static ?string $navigationIcon = 'heroicon-o-shield';
+
+    protected static function getNavigationGroup(): ?string
+    {
+        return trans("dd-permission::lang.administrator");
+    }
 
     public static function form(Form $form): Form
     {
