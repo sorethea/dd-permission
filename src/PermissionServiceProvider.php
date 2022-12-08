@@ -3,7 +3,7 @@
 namespace Sorethea\DdPermission;
 
 use Filament\PluginServiceProvider;
-use Illuminate\Support\ServiceProvider;
+use Sorethea\DdPermission\Filament\Resources\PermissionResource;
 use Spatie\LaravelPackageTools\Package;
 
 class PermissionServiceProvider extends PluginServiceProvider
