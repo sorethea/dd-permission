@@ -13,7 +13,7 @@ class PermissionResource extends Resource
 {
     protected static ?string $model = Permission::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-shield';
+    protected static ?string $navigationIcon = 'heroicon-o-shield-check';
 
     protected static function getNavigationGroup(): ?string
     {
