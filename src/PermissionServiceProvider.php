@@ -8,6 +8,9 @@ use Spatie\LaravelPackageTools\Package;
 
 class PermissionServiceProvider extends PluginServiceProvider
 {
+    protected array $resources =[
+        PermissionResource::class,
+    ];
     public function configurePackage(Package $package): void
     {
         $package->name("dd-permission")
