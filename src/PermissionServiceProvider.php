@@ -14,6 +14,7 @@ class PermissionServiceProvider extends PluginServiceProvider
     public function configurePackage(Package $package): void
     {
         $package->name("dd-permission")
+            ->hasTranslations()
             ->hasConfigFile("dd-permission");
     }
 }
