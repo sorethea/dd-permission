@@ -17,7 +17,7 @@ class PermissionResource extends Resource
 
     protected static function getNavigationGroup(): ?string
     {
-        return trans("dd-permission::lang.administrator");
+        return trans("dd-permission::permission.administrator");
     }
 
     public static function form(Form $form): Form
