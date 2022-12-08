@@ -1,6 +1,6 @@
 <?php
 
-namespace PermissionResource\Pages;
+namespace Sorethea\DdPermission\Filament\Resources\PermissionResource\Pages;
 
 use Filament\Resources\Pages\CreateRecord;
 use PermissionResource;

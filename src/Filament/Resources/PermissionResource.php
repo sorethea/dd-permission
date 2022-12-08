@@ -4,9 +4,6 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
-use PermissionResource\Pages\CreatePermission;
-use PermissionResource\Pages\EditPermission;
-use PermissionResource\Pages\ListPermissions;
 use Spatie\Permission\Models\Permission;
 
 class PermissionResource extends Resource
@@ -50,9 +47,9 @@ class PermissionResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => ListPermissions::route('/'),
-            'create' => CreatePermission::route('/create'),
-            'edit' => EditPermission::route('/{record}/edit'),
+            'index' => \PermissionResource\Pages\ListPermissions::route('/'),
+            'create' => \PermissionResource\Pages\CreatePermission::route('/create'),
+            'edit' => \PermissionResource\Pages\EditPermission::route('/{record}/edit'),
         ];
     }
 }
