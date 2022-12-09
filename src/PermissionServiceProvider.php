@@ -36,7 +36,7 @@ class PermissionServiceProvider extends PluginServiceProvider
 
     public function packageRegistered(): void
     {
-        $this->app->register(AuthServiceProvider::class);
+        //$this->app->register(AuthServiceProvider::class);
     }
 
 

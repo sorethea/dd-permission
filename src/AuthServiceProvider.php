@@ -10,10 +10,10 @@ use Spatie\Permission\Models\Role;
 
 class AuthServiceProvider extends ServiceProvider
 {
-    protected $policies = [
-        Role::class => RolePolicy::class,
-        Permission::class => PermissionPolicy::class
-    ];
+//    protected $policies = [
+//        Role::class => RolePolicy::class,
+//        Permission::class => PermissionPolicy::class
+//    ];
 
     public function boot()
     {
