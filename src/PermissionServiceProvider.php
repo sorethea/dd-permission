@@ -19,11 +19,6 @@ class PermissionServiceProvider extends PluginServiceProvider
         RoleResource::class,
     ];
 
-    protected array $policies = [
-        Permission::class => PermissionPolicy::class,
-        Role::class => RolePolicy::class
-    ];
-
     public function configurePackage(Package $package): void
     {
         $package->name("dd-permission")
