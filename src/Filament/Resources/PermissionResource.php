@@ -34,7 +34,7 @@ class PermissionResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make("name")->searchable()->sortable(),
-                Tables\Columns\TextColumn::make("roles")->counts('roles'),
+                Tables\Columns\TextColumn::make("roles_count")->label(trans("dd-permission::permission.roles"))->counts('roles'),
             ])
             ->filters([
                 //
