@@ -9,10 +9,16 @@ use Spatie\LaravelPackageTools\Package;
 
 class PermissionServiceProvider extends PluginServiceProvider
 {
-    protected array $resources =[
+    protected function publishes(array $paths, $groups = null)
+    {
+        $this->publishes([__DIR__ . '/../database/seeds/PermissionSeeder.php' => database_path("seeders/PermissionSeeder.php")], "dd-permission-seeds");
+    }
+
+    protected array $resources = [
         PermissionResource::class,
         RoleResource::class,
     ];
+
     public function configurePackage(Package $package): void
     {
         $package->name("dd-permission")
@@ -23,9 +29,7 @@ class PermissionServiceProvider extends PluginServiceProvider
 //    public function boot() :void
 //    {
 //        if($this->app->runningInConsole()){
-//            $this->publishes([
-//                __DIR__.'/../database/seeds/PermissionSeeder.php'=>database_path("seeders/PermissionSeeder.php")
-//            ],"dd-permission-seeds");
+//            $this->publishes();
 //        }
 //    }
 }
