@@ -38,6 +38,8 @@ class PermissionServiceProvider extends PluginServiceProvider
             ],"dd-permission-seeds");
         }
 
-        $this->registerPolicies();
+        //$this->registerPolicies();
     }
+
+
 }
