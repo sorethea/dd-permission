@@ -54,9 +54,9 @@ class PermissionResource extends Resource
         ];
     }
 
-    protected static function getGlobalSearchEloquentQuery(): Builder
+    public static function getEloquentQuery(): Builder
     {
-        return parent::getGlobalSearchEloquentQuery()->latest();
+        return parent::getEloquentQuery()->latest();
     }
 
     public static function getPages(): array
