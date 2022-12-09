@@ -19,7 +19,7 @@ class PermissionServiceProvider extends PluginServiceProvider
         RoleResource::class,
     ];
 
-    protected $policies = [
+    protected array $policies = [
         Permission::class => PermissionPolicy::class,
         Role::class => RolePolicy::class
     ];
@@ -37,8 +37,11 @@ class PermissionServiceProvider extends PluginServiceProvider
                 __DIR__.'/../database/seeds/PermissionSeeder.php'=>database_path("seeders/PermissionSeeder.php")
             ],"dd-permission-seeds");
         }
+    }
 
-        //$this->registerPolicies();
+    public function packageRegistered(): void
+    {
+        $this->app->register(AuthServiceProvider::class);
     }
 
 
