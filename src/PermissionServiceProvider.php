@@ -20,12 +20,12 @@ class PermissionServiceProvider extends PluginServiceProvider
             ->hasConfigFile("dd-permission");
     }
 
-    public function boot() :void
-    {
-        if($this->app->runningInConsole()){
-            $this->publishes([
-                __DIR__.'/../database/seeds/PermissionSeeder.php'=>database_path("seeders/PermissionSeeder.php")
-            ],"dd-permission-seeds");
-        }
-    }
+//    public function boot() :void
+//    {
+//        if($this->app->runningInConsole()){
+//            $this->publishes([
+//                __DIR__.'/../database/seeds/PermissionSeeder.php'=>database_path("seeders/PermissionSeeder.php")
+//            ],"dd-permission-seeds");
+//        }
+//    }
 }
