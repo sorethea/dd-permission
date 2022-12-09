@@ -4,6 +4,7 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Illuminate\Database\Eloquent\Builder;
 use Sorethea\DdPermission\Filament\Resources\PermissionResource\Pages\CreatePermission;
 use Sorethea\DdPermission\Filament\Resources\PermissionResource\Pages\EditPermission;
 use Sorethea\DdPermission\Filament\Resources\PermissionResource\Pages\ListPermissions;
@@ -33,6 +34,7 @@ class PermissionResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make("name")->searchable()->sortable(),
+                Tables\Columns\TextColumn::make("roles")->counts(),
             ])
             ->filters([
                 //
@@ -50,6 +52,11 @@ class PermissionResource extends Resource
         return [
             //
         ];
+    }
+
+    protected static function getGlobalSearchEloquentQuery(): Builder
+    {
+        return parent::getGlobalSearchEloquentQuery()->latest();
     }
 
     public static function getPages(): array
