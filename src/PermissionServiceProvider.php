@@ -5,7 +5,11 @@ namespace Sorethea\DdPermission;
 use Filament\PluginServiceProvider;
 use Sorethea\DdPermission\Filament\Resources\PermissionResource;
 use Sorethea\DdPermission\Filament\Resources\RoleResource;
+use Sorethea\DdPermission\Policies\PermissionPolicy;
+use Sorethea\DdPermission\Policies\RolePolicy;
 use Spatie\LaravelPackageTools\Package;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class PermissionServiceProvider extends PluginServiceProvider
 {
@@ -14,6 +18,12 @@ class PermissionServiceProvider extends PluginServiceProvider
         PermissionResource::class,
         RoleResource::class,
     ];
+
+    protected $policies = [
+        Permission::class => PermissionPolicy::class,
+        Role::class => RolePolicy::class
+    ];
+
     public function configurePackage(Package $package): void
     {
         $package->name("dd-permission")
@@ -27,5 +37,7 @@ class PermissionServiceProvider extends PluginServiceProvider
                 __DIR__.'/../database/seeds/PermissionSeeder.php'=>database_path("seeders/PermissionSeeder.php")
             ],"dd-permission-seeds");
         }
+
+        $this->registerPolicies();
     }
 }
